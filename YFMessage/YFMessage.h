@@ -6,16 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MBProgressHUD.h"
-
-//typedef void(^AlertButtonClickedBlock)(NSInteger buttonIndex);
+#import <MBProgressHUD/MBProgressHUD.h>
 
 /**< 消息提示 */
 @interface YFMessage : NSObject <UIAlertViewDelegate>
 
 @property (nonatomic, strong) MBProgressHUD * _Nullable hudView;
 @property (nonatomic, strong) UIView * _Nullable noContentTipView;
-//@property (nonatomic, copy) AlertButtonClickedBlock block;
 
 + (YFMessage *_Nonnull)shareMessage;
 

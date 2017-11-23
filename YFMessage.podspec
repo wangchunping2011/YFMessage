@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.source_files  = "YFMessage/**/*.{h,m}"
   s.public_header_files = "YFMessage/**/*.h"
 
-  s.dependency 'MBProgressHUD'
+  s.dependency 'MBProgressHUD', '~> 0.9'
 end

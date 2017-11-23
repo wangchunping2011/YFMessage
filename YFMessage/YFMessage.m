@@ -323,12 +323,11 @@ static YFMessage *yfMsg = nil;
  */
 + (void)showActiveViewOnView:(UIView *_Nonnull)view
 {
-    BOOL isMainThread = [NSThread isMainThread];
-    if (isMainThread) {
-        [YFMessage showActiveViewWithTipString:YFCulture(@"加载中...") onView:view];
+    if ([NSThread isMainThread]) {
+        [YFMessage showActiveViewWithTipString:@"加载中..." onView:view];
     }else{
         dispatch_async(dispatch_get_main_queue(), ^{
-            [YFMessage showActiveViewWithTipString:YFCulture(@"加载中...") onView:view];
+            [YFMessage showActiveViewWithTipString:@"加载中..." onView:view];
         });
     }
 }
