@@ -289,7 +289,7 @@ static YFMessage *yfMsg = nil;
 }
 
 //获取当前屏幕显示的viewcontroller
-- (UIViewController *)getCurrentVC
++ (UIViewController *)getCurrentVC
 {
     UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     
@@ -298,7 +298,7 @@ static YFMessage *yfMsg = nil;
     return currentVC;
 }
 
-- (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC
++ (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC
 {
     UIViewController *currentVC;
     
